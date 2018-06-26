@@ -1,0 +1,164 @@
+.table-holder {
+	font-size: 14px;
+	line-height: 1.4286;
+	letter-spacing: -.5px;
+
+	@include media('<tablet') {
+		margin: 0 -14px;
+	}
+
+	@include media('>=desktop') {
+		font-size: 16px;
+		line-height: 1.5;
+		margin: 0;
+	}
+}
+
+table {
+	background: $white;
+	width: 100%;
+	box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	letter-spacing: -.5px;
+
+	i {
+		font-size: 14px;
+
+		@include media('>=desktop') {
+			font-size: 18px;
+		}
+	}
+
+	tr {
+
+		&:first-child {
+
+			th {
+				color: inherit;
+				border: 1px solid #ebebeb;
+				background: $base-background-color;
+				text-align: center;
+				border-top: none;
+				padding: 28px 5px;
+
+				@include media('<tablet') {
+					max-width: 30px;
+				}
+
+				&:first-child {
+					border-radius: 5px 0 0 0;
+					border-left: none;
+				}
+
+				&:last-child {
+					border-radius: 0 5px 0 0;
+					border-right: none;
+				}
+			}
+		}
+
+		&:last-child {
+
+			td {
+				border-bottom: none;
+			}
+		}
+
+		td {
+
+			&:first-child {
+				color: lighten($black, 25%);
+				border-left: none;
+				text-align: left;
+				padding: 21px 15px;
+				max-width: none;
+				width: auto;
+
+				@include media('>=tablet') {
+					padding: 25px 20px 25px 30px;
+				}
+			}
+
+			&:last-child {
+				border-right: none;
+			}
+
+			&:nth-child(4) {
+				background: #f5f6fb;
+				color: $primary;
+			}
+		}
+	}
+
+	td {
+		color: darken($gray, 10%);
+		border: 1px solid #ebebeb;
+		text-align: center;
+		padding: 21px 5px;
+
+		@include media('>=tablet') {
+			padding: 25px 5px;
+			width: 140px;
+		}
+	}
+
+	th {
+		background: lighten($gray, 17%);
+		color: $dark-blue;
+		text-align: left;
+		padding: 18px 15px;
+		font-weight: 500;
+
+		@include media('>=tablet') {
+			padding: 20px 30px;
+		}
+	}
+}
+
+.title-table {
+	display: block;
+	font-weight: 500;
+	color: darken($black, 4%);
+	margin: 0 0 10px;
+
+	@include media('>=tablet') {
+		margin: 0 0 5px;
+	}
+}
+
+.ico-name {
+	font-weight: 500;
+
+	@include media('>=tablet') {
+		display: block;
+	}
+}
+
+.ico-holder {
+	display: inline-block;
+	vertical-align: top;
+	width: 20px;
+	margin: 0 6px 0 0;
+
+	@include media('>=tablet') {
+		width: 50px;
+		margin: 0 0 10px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.table-icon {
+	white-space: nowrap;
+	transform: rotate(-90deg);
+	transform-origin: 100% 100%;
+	margin: 64px 0 0;
+
+	@include media('>=tablet') {
+		margin: 0;
+		transform: none;
+		transform-origin: unset;
+	}
+}

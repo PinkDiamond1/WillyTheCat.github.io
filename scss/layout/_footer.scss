@@ -1,0 +1,162 @@
+#footer {
+	background: $secondary;
+	font-size: 14px;
+	line-height: 1.428;
+	padding: 40px 0;
+	color: $white;
+
+	@include media('>=tablet') {
+		padding: 101px 0 50px;
+	}
+}
+
+.footer-body {
+	margin: 0 0 41px;
+	border-bottom: 1px solid rgba(250, 250, 250, .1);
+
+	@include media('>=tablet') {
+		display: flex;
+		padding: 0 0 81px;
+		margin: 0 0 51px;
+	}
+}
+
+.logo-footer {
+	width: 103px;
+	margin: -8px 0 0;
+
+	@include media('<tablet') {
+		margin: 0 0 43px;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.footer-columns {
+
+	@include media('>=tablet') {
+		display: flex;
+		flex: 1 0;
+		margin: 0 -20px;
+	}
+
+	.column {
+		padding: 0 0 42px;
+
+		@include media('>=tablet') {
+			width: 33.3%;
+			padding: 0 20px;
+		}
+
+		@include media('>=desktop') {
+			width: 17%;
+		}
+
+		&:first-child {
+
+			@include media('<tablet') {
+				padding: 0;
+			}
+
+			@include media('>=desktop') {
+				width: 25%;
+			}
+		}
+
+		&:last-child {
+
+			@include media('>=desktop') {
+				width: 41%;
+			}
+		}
+	}
+
+	ul {
+		@extend %listreset;
+	}
+
+	li {
+		margin: 0 0 21px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+	a {
+		color: inherit;
+		transition: color 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $primary;
+		}
+	}
+}
+
+.footer-title {
+	font-weight: 500;
+	display: block;
+	opacity: .7;
+	margin: 0 0 30px;
+}
+
+.footer-bottom {
+
+	@include media('>=tablet') {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+	}
+}
+
+.list-link {
+	@extend %listreset;
+	font-weight: 500;
+
+	@include media('>=tablet') {
+		width: 70%;
+		display: flex;
+		margin: 0 -16px;
+		flex: 1 0;
+		justify-content: flex-end;
+	}
+
+	@include media('>=desktop') {
+		width: 48%;
+	}
+
+	a {
+		color: inherit;
+		transition: color 0.3s ease-in-out;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $primary;
+		}
+	}
+
+	li {
+		margin: 0 0 21px;
+
+		@include media('>=tablet') {
+			display: flex;
+			margin: 0 16px;
+		}
+	}
+}
+
+.copyright {
+	opacity: .7;
+
+	@include media('>=tablet') {
+		width: 30%;
+	}
+
+	@include media('>=desktop') {
+		width: 48%;
+	}
+}

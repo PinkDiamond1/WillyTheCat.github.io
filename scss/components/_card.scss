@@ -1,0 +1,41 @@
+.card {
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: -.5px;
+
+	.btn {
+		font-size: 14px;
+		width: 100%;
+		padding: 14px 15px;
+
+		@include media('>=tablet') {
+			min-width: 122px;
+			width: auto;
+			padding: 10px 15px;
+		}
+	}
+
+	p {
+		margin: 0 0 24px;
+	}
+}
+
+.card-header {
+	background: $primary;
+	color: $white;
+	text-align: center;
+	border-radius: 5px 5px 0 0;
+	padding: 31px 30px 29px;
+}
+
+.card-body {
+	padding: 31px 28px 30px 28px;
+	border-radius: 0 0 5px 5px;
+	border: solid #ebebeb;
+	border-width: 0 1px 1px 1px;
+}
+
+.subtitle-card {
+	display: block;
+}
+

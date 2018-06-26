@@ -1,0 +1,29 @@
+.banner-section {
+	background: $primary;
+	color: $white;
+	padding: 81px 0 85px;
+	text-align: center;
+
+	@include media('>=tablet') {
+		padding: 145px 0 123px;
+	}
+
+	.container {
+		max-width: 1010px;
+	}
+
+	h1 {
+		margin: 0 0 60px;
+		letter-spacing: -0.6px;
+
+		@include media('>=tablet') {
+			margin: 0 0 102px;
+			letter-spacing: -0.4px;
+		}
+
+		@include media('>=desktop') {
+			font-size: 52px;
+			line-height: 1.03;
+		}
+	}
+}

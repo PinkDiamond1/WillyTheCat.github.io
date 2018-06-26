@@ -1,0 +1,70 @@
+.social-block {
+	background: lighten($gray, 17%);
+	text-align: center;
+	padding: 94px 0 80px;
+
+	@include media('>=tablet') {
+		padding: 143px 0 56px;
+	}
+
+	.container {
+		max-width: 760px;
+
+		@include media('>=tablet') {
+			position: relative;
+			min-height: 354px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		&:after {
+
+			@include media('>=tablet') {
+				position: absolute;
+				content: '';
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				margin-left: -100%;
+				left: -69px;
+				background: url(../images/img3.png) no-repeat 100% 50% ;
+				overflow: hidden;
+
+				@include media('retina2x') {
+					background-image: url(../images/img3-2x.png);
+					background-size: 324px 354px;
+				}
+			}
+		}
+
+		&:before {
+
+			@include media('>=tablet') {
+
+				position: absolute;
+				content: '';
+				width: 100%;
+				top: 0;
+				bottom: 0;
+				margin-right: -100%;
+				right: -71px;
+				background: url(../images/img4.png) no-repeat 0 50% ;
+				overflow: hidden;
+
+				@include media('retina2x') {
+					background-image: url(../images/img4-2x.png);
+					background-size: 324px 354px;
+				}
+			}
+		}
+	}
+
+	h1 {
+		margin: 0 0 52px;
+
+		@include media('>=tablet') {
+			margin: 0 0 74px;
+		}
+	}
+}

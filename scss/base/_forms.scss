@@ -1,0 +1,80 @@
+// forms
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+//input[type='url'],
+// input[type='date'],
+textarea {
+	display: inline-block;
+	vertical-align: top;
+	font: 16px/1.5 $base-font-family;
+	border: 1px solid $form-element-border-color;
+	padding: $form-element-padding;
+	background: $base-background-color;
+	width: 100%;
+	height: 64px;
+	margin: 0 0 10px;
+	border-radius: 4px;
+	box-sizing: border-box;
+	appearance: none;
+	outline: none;
+
+	&:focus {
+		border-color: $form-element-focus-border-color;
+	}
+
+	@include placeholder {
+		color: $placeholder-color;
+	}
+}
+
+select {
+	-webkit-border-radius: 0;
+}
+
+textarea {
+	resize: vertical;
+	vertical-align: top;
+}
+
+button[type='submit'] {
+	display: inline-block;
+	vertical-align: top;
+	min-width: 195px;
+	height: 64px;
+	font:500 16px/1.5 $base-font-family;
+	border: 1px solid $primary;
+	margin: 0 0 10px;
+	padding: 19px;
+	transition: background 0.3s ease-in-out;
+	background: $btn-background;
+	color: $btn-color;
+	border-radius: 4px;
+	outline: none;
+	appearance: none;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover {
+		background: darken($primary, 15%);
+		color: $btn-color;
+	}
+}
+
+input[type='button'],
+input[type='reset'],
+input[type='file']{
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	cursor: pointer;
+	outline: none;
+}

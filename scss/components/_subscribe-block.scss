@@ -1,0 +1,44 @@
+.subscribe-block {
+	padding: 82px 0 69px;
+	text-align: center;
+	font-size: 16px;
+
+	@include media('>=tablet') {
+		padding: 120px 0;
+	}
+
+	h1 {
+		margin: 0 0 38px;
+
+		@include media('>=desktop') {
+			margin: 0 0 60px;
+		}
+	}
+}
+
+.form-subscribe {
+
+	@include media('>=tablet') {
+		margin: 0 0 -10px;
+	}
+
+	input[type='email'] {
+
+		@include media('>=tablet') {
+			width: 400px;
+			margin-right: 6px;
+		}
+	}
+
+	button[type='submit'] {
+
+		@include media('<tablet') {
+			width: 100%;
+		}
+	}
+
+	.icon-arrow {
+		opacity: .4;
+		margin: 0 0 0 20px;
+	}
+}

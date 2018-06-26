@@ -1,0 +1,93 @@
+.info-block {
+	padding: 80px 0 61px;
+
+	@include media('>=tablet') {
+		padding: 58px 0 57px;
+	}
+
+	&:first-child {
+
+		@include media('<tablet') {
+			padding: 80px 0 30px;
+		}
+
+		.text-column {
+
+			@include media('<tablet') {
+				margin: 0 0 6px;
+			}
+		}
+	}
+
+	.container {
+		max-width: 1225px;
+		text-align: center;
+
+		@include media('>=tablet') {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			padding: 0 25px;
+		}
+	}
+
+	.text-column {
+
+		@include media('<tablet') {
+			margin: 0 0 35px;
+		}
+
+		p {
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	&:nth-child(odd) {
+		background: lighten($gray, 17%);
+
+		.image-wrap {
+
+			@include media('>=widescreen') {
+				margin: 0 -110px 0 0;
+			}
+		}
+	}
+
+	&:nth-child(even) {
+
+		.container {
+			@include media('>=tablet') {
+				flex-direction: row-reverse;
+			}
+		}
+
+		.image-wrap {
+
+			@include media('>=widescreen') {
+				margin: 0 0 0 -110px;
+			}
+		}
+	}
+
+	.btn {
+		margin: 0 0 21px;
+
+		@include media('>=tablet') {
+			margin: 0 0 23px;
+		}
+	}
+
+	p {
+		@include media('<tablet') {
+			margin: 0 0 35px;
+		}
+	}
+
+	.image-wrap {
+		@include media('<tablet') {
+			margin: 0 -30px;
+		}
+	}
+}

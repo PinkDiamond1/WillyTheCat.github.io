@@ -1,0 +1,64 @@
+.btn {
+	@include animate(color background);
+	display: inline-block;
+	vertical-align: top;
+	background: $btn-background;
+	color: $btn-color;
+	padding: $btn-padding;
+	min-width: 64px;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 500;
+	border-radius: 4px;
+	text-align: center;
+	text-decoration: none;
+
+	&:hover {
+		background: darken($primary, 15%);
+		color: $btn-color;
+	}
+
+	&.btn-sm {
+		padding: 5px 10px;
+		font-size: 14px;
+
+		@include media('>=tablet') {
+			padding: 3px 10px;
+		}
+
+		@include media('>=desktop') {
+			font-size: 16px;
+		}
+	}
+
+	&.btn-info {
+		min-width: 130px;
+		background: $btn-info-color;
+
+		@include media('>=tablet') {
+			min-width: 140px;
+		}
+
+		&:hover {
+			background: darken($btn-info-color, 15%);
+			color: $btn-color;
+		}
+	}
+
+	&.btn-arrow {
+		padding: 20px 65px 20px 40px;
+		min-width: 215px;
+		text-align: left;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			font-family: 'icomoon';
+			content: "\e900";
+			top: 50%;
+			transform: translateY(-50%);
+			right: 40px;
+			opacity: .5;
+		}
+	}
+}

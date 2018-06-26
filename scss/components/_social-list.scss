@@ -1,0 +1,63 @@
+.social-list {
+	@extend %listreset;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -10px;
+
+	@include media('<tablet') {
+		flex-wrap: wrap;
+		margin: 0 -35px -34px;
+		justify-content: center;
+	}
+
+	li {
+		padding: 0 10px;
+
+		@include media('<tablet') {
+			padding: 0 35px 34px;
+		}
+	}
+
+	a {
+		display: block;
+		color: $dark-blue;
+
+		&:hover i {
+			color: $primary;
+		}
+	}
+
+	i {
+		display: block;
+		font-size: 35px;
+		margin: 0 0 15px;
+		transition: color 0.3s ease-in-out;
+	}
+
+	.icon-twitter {
+		color: #2ca7e0;
+	}
+
+	.icon-facebook {
+		color: #3e45ac;
+	}
+
+	.icon-linkedin {
+		color: #007ebb;
+	}
+
+	.icon-youtube {
+		color: #ce1312;
+	}
+
+	.icon-medium {
+		color: #000;
+	}
+
+	.icon-discord {
+		color: #7289da;
+	}
+}

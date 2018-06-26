@@ -1,0 +1,176 @@
+#header {
+	padding: 21px 0;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include media('<tablet') {
+			padding: 0 25px;
+		}
+	}
+
+	.btn {
+		min-width: 112px;
+		font-size: 14px;
+		margin: 0 25px 0 0;
+
+		@include media('>=tablet') {
+			margin: 0 0 0 20px;
+			min-width: 130px;
+			font-size: 12px;
+		}
+
+		@include media('>=desktop') {
+			margin: 0 0 0 40px;
+			min-width: 170px;
+			font-size: 14px;
+		}
+	}
+}
+
+.main-nav {
+	display: flex;
+	justify-content: flex-end;
+	flex: 1 0;
+
+	@include media('>=tablet') {
+		flex-direction: row-reverse;
+		justify-content: start;
+		align-items: center;
+	}
+}
+
+.nav-menu {
+	@extend %listreset;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+
+	@include media('>=tablet') {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		margin: 0 -10px -10px;
+		font-size: 13px;
+		letter-spacing: -0.5px;
+	}
+
+	@include media('>=desktop') {
+		margin: 0 -15px -10px;
+		font-size: 14px;
+		letter-spacing: 0;
+	}
+
+	li {
+		@include media('>=tablet') {
+			padding: 0 10px 9px;
+		}
+
+		@include media('>=desktop') {
+			padding: 0 15px 5px;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 15px;
+		text-decoration: none;
+
+		@include media('>=tablet') {
+			padding: 0;
+		}
+	}
+}
+
+.nav-opener {
+	width: 24px;
+	height: 26px;
+	float: right;
+	position: relative;
+	margin: 5px 0;
+
+	@include media ('>=tablet') {
+		display: none;
+	}
+
+	&:before,
+	&:after,
+	span {
+		background: darken($gray, 25%);
+		position: absolute;
+		top: 12px;
+		left: 0;
+		right: 0;
+		height: 3px;
+		transition: transform .2s linear;
+	}
+
+	&:before,
+	&:after{
+		content: '';
+		top: 5px;
+	}
+
+	&:after {
+		top: 19px;
+	}
+
+	.nav-active & {
+		&:before,
+		&:after{
+			transform: rotate(45deg);
+			top: 50%;
+			left: 0;
+			right: 0;
+		}
+
+		&:after{
+			transform: rotate(-45deg);
+		}
+
+		span {
+			opacity: 0;
+		}
+	}
+}
+
+.nav-drop{
+	@include animate(opacity visibility);
+
+	@include media ('<tablet') {
+		min-height: calc(100vh - 83px);
+		padding: 20px 0;
+		visibility: hidden;
+		overflow: hidden;
+		position: absolute;
+		top: 83px;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		z-index: 999;
+		background: $white;
+	}
+
+	.nav-active & {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.resize-active *{
+	transition: none !important;
+}
+
+.logo {
+	width: 84px;
+
+	img {
+		width: 100%;
+	}
+
+	@include media('>=tablet') {
+		margin: 0 20px 0 0;
+	}
+}

@@ -1,0 +1,26 @@
+.roadmap-block {
+	padding: 82px 0 80px;
+
+	@include media('>=tablet') {
+		padding: 122px 0 120px;
+	}
+
+	@include media('<desktop') {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.container {
+		max-width: 865px;
+	}
+
+	h1 {
+		text-align: center;
+		margin: 0 0 54px;
+
+		@include media('>=tablet') {
+			margin: 0 0 81px;
+		}
+	}
+}
+

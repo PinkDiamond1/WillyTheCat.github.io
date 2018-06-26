@@ -1,0 +1,28 @@
+.check-list {
+	@extend %listreset;
+	font-weight: 500;
+	margin: 0 0 -5px;
+	padding: 0 0 25px;
+
+	li {
+		position: relative;
+		padding: 9px 0 14px 41px;
+
+		&:after {
+			font-family: 'icomoon';
+			position: absolute;
+			content: "\e903";
+			height: 32px;
+			width: 32px;
+			background: $green;
+			color: $white;
+			font-size: 8px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			top: 5px;
+			left: 0;
+		}
+	}
+}

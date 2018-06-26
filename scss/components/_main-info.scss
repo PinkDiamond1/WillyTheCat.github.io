@@ -1,0 +1,30 @@
+.main-info {
+	padding: 81px 0 83px;
+
+	@include media('>=tablet') {
+		padding: 125px 0 123px;
+	}
+
+	.container {
+		text-align: center;
+
+		@include media('>=tablet') {
+			display: flex;
+			align-items: center;
+			text-align: left;
+			padding: 0 25px;
+		}
+	}
+
+	.image-wrap {
+		margin: 0 -40px;
+
+		@include media('>=widescreen') {
+			margin: 0 -130px 0 0;
+		}
+	}
+}
+
+
+
+

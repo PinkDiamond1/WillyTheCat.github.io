@@ -1,0 +1,53 @@
+.faq-block {
+	background: lighten($gray, 17%);
+	padding: 83px 0 80px;
+
+	@include media('>=tablet') {
+		padding: 120px 0;
+	}
+
+	.container {
+		max-width: 845px;
+	}
+
+	h1 {
+		margin: 0 0 59px;
+		text-align: center;
+
+		@include media('>=tablet') {
+			margin: 0 0 80px;
+			text-align: left;
+		}
+	}
+
+	h2 {
+		margin: 0 0 15px;
+
+		@include media('>=tablet') {
+			margin: 0 0 20px;
+		}
+	}
+}
+
+.faq-list {
+	@extend %listreset;
+	max-width: 680px;
+
+	li {
+		padding: 0 0 41px;
+
+		@include media('>=tablet') {
+			padding: 0 0 40px;
+		}
+
+		p {
+			&:last-child {
+				margin: 0;
+			}
+		}
+
+		&:last-child {
+			padding: 0;
+		}
+	}
+}
