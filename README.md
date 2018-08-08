@@ -1,2 +1,2 @@
-# bitcashproject.com
+# choosebitcash.com
 Bitcash website
