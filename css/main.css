@@ -428,6 +428,7 @@ th {
 .platforms-list,
 .roadmap-list,
 .social-list,
+.download-list,
 .faq-list,
 .footer-columns ul,
 .list-link {
@@ -1152,6 +1153,40 @@ time {
 	display: block;
 	font-weight: 500;
 	margin: 0 0 20px;
+}
+
+.download-list {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: center;
+	margin: 0 -10px;
+}
+
+.download-list li {
+	padding: 0 10px;
+}
+
+.download-list a {
+	display: block;
+	color: #171a31;
+}
+
+.download-list a:hover i {
+	color: #3e45ac;
+}
+
+.download-list i {
+	display: block;
+	font-size: 35px;
+	margin: 0 0 15px;
+	-webkit-transition: color .3s ease-in-out;
+	transition: color .3s ease-in-out;
 }
 
 .social-list {
@@ -2195,4 +2230,4 @@ table th {
 		flex-wrap: wrap;
 	}
 }
-
+
