@@ -930,6 +930,14 @@ time {
 	width: 100%;
 }
 
+.linebelowheader {
+  height: 1px;
+  min-height: 1px;
+  width: 100%;
+  background-color: #f0f1f5;
+  margin-top: 19px
+}
+
 .btn {
 	-webkit-transition: color .3s ease-in-out, background .3s ease-in-out;
 	transition: color .3s ease-in-out, background .3s ease-in-out;
@@ -1617,7 +1625,7 @@ table th {
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 840px) {
 	h1,
 	.h1 {
 		margin: 0 0 1.187rem;
@@ -2009,7 +2017,7 @@ table th {
 	}
 }
 
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi) {
+@media (min-width: 840px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 840px) and (min-resolution: 144dpi) {
 	.social-block .container:after {
 		background-image: url(../images/img3-2x.png);
 		background-size: 324px 354px;
@@ -2129,7 +2137,7 @@ table th {
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 840px) {
 	#header .container {
 		padding: 0 25px;
 	}
