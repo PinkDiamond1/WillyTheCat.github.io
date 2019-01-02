@@ -1519,6 +1519,10 @@ table th {
 	padding: 94px 0 80px;
 }
 
+.whitebackground {
+	background: #ffffff;	
+}
+
 .social-block .container {
 	max-width: 760px;
 }
