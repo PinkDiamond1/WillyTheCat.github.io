@@ -50,13 +50,14 @@
 <h1 align="center" class="Claim-your-coins">List of BitCash mining pools</h1>
 The following list of mining pools is in no particular order. If you want to operate a BitCash mining pool and
 list your pool here, please contact us.
-<h3>Pools ready for X16R:</h3>
+<br>							
+<h2>Pools ready for X16R:</h2>
 <ul>		
 <li>Website: <a href="http://icemining.ca">http://icemining.ca</a> stratum+tcp://mine.icemining.ca:3649 pool fee: 1%</li>
 <li>Website: <a href="https://bitc.skypool.co">https://bitc.skypool.co</a> stratum+tcp://bitc-us.skypool.co:8101 pool fee: 1%</li>	
 <li>Website: <a href="https://cryptonova.eu">https://cryptonova.eu</a> stratum+tcp://cryptonova.eu:3636 pool fee: 1%</li>	
 </ul>
-<h3>Cuckoo Cycle pools</h3>
+<h2>Cuckoo Cycle pools - not yet upgraded to X16R</h2>
 <ul>							
 <li>Website: <a href="https://bitc.luckypool.io/">https://bitc.luckypool.io/</a> stratum+tcp://bitc.luckypool.io:5777 pool fee: 1%</li>
 <li>Website: <a href="https://www.tera.tn/">https://www.tera.tn/</a> stratum+tcp://tera.tn:1596 pool fee: 0.5%</li>
@@ -64,58 +65,6 @@ list your pool here, please contact us.
 <li>Website: <a href="https://uberkripto.club/">https://uberkripto.club/</a> stratum+tcp://bitc.uberkripto.club:9999 pool fee: 1%</li>
 </ul>
 <p>
-<h1 align="center" class="Claim-your-coins">Zjazz has created another miner which supports BitCash</h1>
-<a class="btn" href="https://github.com/zjazz/zjazz_cuda_miner/releases">Download the Zjazz miner</a>
-<p>
-You need to set the size of the page file to at least 5 GB x number of GPUs you are using. So for 6 GPUs you can set it to 30 GB.
-<p>
-<h1 align="center" class="Claim-your-coins">How to use the pool mining software</h1>
-This is an example how to use it:
-<pre>
-bitcash-minerd.exe -a willythecat -g0 -u "stratum+tcp://bitc.youpool.io:3368"
-</pre>
-This would mine using GPU number 0 and would payout to the nickname willythecat using the Windows version.
-Your nickname will not appear on the blockchain. Each payout will go to a new random stealth address. But the pool may show your nickname
-in the pool statistics.
-<pre>
-./bitcash-minerd -a 17YoNDb7fEpNkkgQ8HaxgFVAoMoEnimPxiV5qmmvtLWjKWbkL7B -g0 -u "stratum+tcp://104.156.231.20:3333"
-</pre>
-This is an example how to start the Linux version. It would payout to the BitCash address 17YoNDb7fEpNkkgQ8HaxgFVAoMoEnimPxiV5qmmvtLWjKWbkL7B.
-<p>
-<p>
-							 
-<h1 align="center" class="Claim-your-coins">The Windows mining software</h1>
-<a class="btn" href="https://wallet.choosebitcash.com/downloads/bitcash-minerd.exe">Download bitcash-minerd.exe for Windows</a>
-<p>
-Simply download the EXE file and copy it into a folder of your choice for installation.
-You may need to install the CUDA Toolkit 9.2 for Nvidia GPU mining. You need a NVIDIA graphics card with at least 4 GB of memory.
-Or you can use CPU mining.
-You may need to install the Visual Studio 2015 Runtime Libraries if not already installed. 
-
-<h1 align="center" class="Claim-your-coins">Ubuntu 18.04</h1>
-
-<a class="btn" href="https://wallet.choosebitcash.com/downloads/ubuntu18/bitcash-minerd">Download bitcash-minerd for Ubuntu 18.04</a>
-<p>
-Simply download the file and copy it into a folder of your choice for installation.
-Set the file permission so that you can execute the file:
-<pre>
-chmod 777 bitcash-minerd
-</pre>
-You may need to install the CUDA Toolkit 9.1 for Nvidia GPU mining. You need a NVIDIA graphics card with at least 4 GB of memory.
-Or you can use CPU mining.
-<p>
-<p>
-<h1 align="center" class="Claim-your-coins">Ubuntu 16.04</h1>
-
-<a class="btn" href="https://wallet.choosebitcash.com/downloads/ubuntu16/bitcash-minerd">Download bitcash-minerd for Ubuntu 16.04</a>
-<p>
-Simply download the file and copy it into a folder of your choice for installation.
-Set the file permission so that you can execute the file:
-<pre>
-chmod 777 bitcash-minerd
-</pre>
-You may need to install the CUDA Toolkit 9.2 for Nvidia GPU mining. You need a NVIDIA graphics card with at least 4 GB of memory.
-Or you can use CPU mining.
 
 
                                                                           						
