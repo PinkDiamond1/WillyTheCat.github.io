@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BitCash - The World's Most Usable Cryptocurrency</title>
+	<link media="all" rel="stylesheet" href="https://wallet.choosebitcash.com/css/main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-3.2.1.min.js" defer><\/script>')</script>
+	<script src="js/jquery.main.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<div class="logo">
+					<a href="https://www.choosebitcash.com/#">
+						<img src="images/logo.svg" alt="BitCash" width="84" height="37">
+					</a>
+				</div>
+				<nav class="main-nav">
+					<a class="btn" href="https://www.choosebitcash.com/#download">Download <span class="d-none">Wallet</span></a>
+					<a href="https://www.choosebitcash.com/#" class="nav-opener"><span></span></a>
+					<div class="nav-drop">
+						<ul class="nav-menu">
+							<li>
+								<a href="https://www.choosebitcash.com/#whatisbitcash">What is BitCash?</a>
+							</li>
+							<li>
+								<a href="https://www.choosebitcash.com/#features">Features</a>
+							</li>
+							<li>
+								<a href="https://www.choosebitcash.com/#compare">Compare BitCash</a>
+							</li>
+							<li>
+								<a href="https://www.choosebitcash.com/#community">Join Community</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+      <div class="linebelowheader">      
+      </div>      
+		</header>
+		<main id="main" class="main">						  	      			
+			<div class="info-list">
+				<div class="info-block">
+					<div class="container">
+						<div class="text-column">							                                       
+<h1 align="center" class="Claim-your-coins">Integration of BitCash on your exchange</h1>
+BitCash uses stealth addresses and it needs to check if an incoming transaction matches one of the addresses in the wallet. This means that the node will slow down extremely when you add more and more stealth addresses.
+<p>
+There are two possible solutions:
+<ol>
+<li>
+We now introduced a new kind of address for use on the exchanges which acts like a normal Bitcoin address. You can create it with the RPC command: getnewaddress "" nonprivate
+So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your file wallet.dat. If you already have, you should start over with a new file wallet.dat and only create this special kind of address.
+You should only use this kind of address for your exchange.
+</li>
+<li>
+You can use only one stealth address as a deposit address for all users. You can show the user a randomly generated key. The user needs to enter this key as description line when he makes a deposit. You can check the description line when the transaction comes in and credit the coins to the user account.
+</li>
+</ol>
+
+
+
+                                                                          						
+						</div>						
+					</div>
+				</div>				
+			</div>      			
+		</main>
+		<footer id="footer">
+			<div class="container">
+				<div class="footer-body">
+					<div class="footer-columns">
+						<div class="column">
+							<div class="logo-footer">
+								<a href="https://www.choosebitcash.com/#">
+									<img src="images/logo2.svg" alt="BitCash">
+								</a>
+							</div>
+						</div>
+						<div class="column">
+							<span class="footer-title">BitCash</span>
+							<ul>
+								<li>
+									<a href="https://www.choosebitcash.com/whitepaper.pdf">Read the Whitepaper</a>
+								</li>
+								<li>
+									<a href="https://www.choosebitcash.com/#download">Download Wallets</a>
+								</li>
+								<!-- li>
+									<a href="https://www.choosebitcash.com/#">See the Source Code</a>
+								</li>
+								<li>
+									<a href="https://www.choosebitcash.com/#">Contact</a>
+								</li -->
+							</ul>
+						</div>
+						<div class="column">
+							<span class="footer-title">Useful links</span>
+							<ul>
+								<li>
+									<a href="https://www.choosebitcash.com/#community">Community</a>
+								</li>
+								<li>
+									<a href="https://github.com/WillyTheCat/BitCash" target="_new">Source code</a>
+								</li>
+								<li>
+									<a href="http://help.choosebitcash.com" target="_new">Help Documentation</a>
+								</li>
+								<li>
+									<a href="http://explorer.choosebitcash.com" target="_new">Block Explorer</a>
+								</li>
+								<!-- li>
+									<a href="https://www.choosebitcash.com/#">Blog</a>
+								</li -->
+							</ul>
+						</div>
+						<!-- div class="column">
+							<span class="footer-title">About</span>
+							<ul>
+								<li>
+									<a href="https://www.choosebitcash.com/#">What is BitCash?</a>
+								</li>
+								<li>
+									<a href="https://www.choosebitcash.com/#">Lorem ipsum</a>
+								</li>
+								<li>
+									<a href="https://www.choosebitcash.com/#">Website archive</a>
+								</li>
+							</ul>
+						</div -->
+					</div>
+				</div>
+				<!-- div class="footer-bottom">
+					<ul class="list-link">
+						<li>
+							<a href="https://www.choosebitcash.com/#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="https://www.choosebitcash.com/#">Safety and cookies</a>
+						</li>
+						<li>
+							<a href="https://www.choosebitcash.com/#">Term of use</a>
+						</li>
+					</ul>
+					<!-- span class="copyright">Copyright ® 2018 BitCash </span -->
+				<!-- /div -->
+			</div>
+		</footer>
+	</div>
+	<script>
+!function(e,l,v,i,o,n){e[i]||(e[i]={}),e[i].account_id=n;var g,h;g=l.createElement(v),g.type="text/javascript",g.async=1,g.src=o+n,h=l.getElementsByTagName(v)[0],h.parentNode.insertBefore(g,h);e[i].q=[];e[i].on=function(z,y){e[i].q.push([z,y])}}(window,document,"script","_elev","https://cdn.elev.io/sdk/bootloader/v4/elevio-bootloader.js?cid=","5b5909341b72e");
+/*
+ * For passing user information, please see
+ * https://api-docs.elevio.help/en/articles/24
+ */
+</script>
+</body>
+</html>
