@@ -541,11 +541,12 @@ p {
 }
 
 a {
-	color: #202124;
-	text-decoration: none;
+	color: #343990;
 	-webkit-transition: color .3s ease-in-out;
 	transition: color .3s ease-in-out;
+        text-decoration: underline;
 }
+
 
 a:hover,
 a:focus {
