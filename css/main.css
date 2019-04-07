@@ -541,10 +541,10 @@ p {
 }
 
 a {
-	color: #343990;
+	color: #202124;
+	text-decoration: none;
 	-webkit-transition: color .3s ease-in-out;
 	transition: color .3s ease-in-out;
-        text-decoration: underline;
 }
 
 
