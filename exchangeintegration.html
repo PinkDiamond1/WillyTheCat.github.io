@@ -48,19 +48,22 @@
 					<div class="container">
 						<div class="text-column">							                                       
 <h1 align="center" class="Claim-your-coins">Integration of BitCash on your exchange</h1>
-BitCash uses stealth addresses and it needs to check if an incoming transaction matches one of the addresses in the wallet. This means that the node will slow down extremely when you add more and more stealth addresses.
-<p>
+BitCash uses stealth addresses and it needs to check if an incoming transaction matches one of the addresses in the wallet.
+<br><br>
+This means that the node will significantly slow down when you add more and more stealth addresses.
+<br><br>
 There are two possible solutions:
 <ol>
 <li>
-We introduced a new kind of address for use on the exchanges which acts like a normal Bitcoin address. You can create it with the RPC command: getnewaddress "" nonprivate<br>
-So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your file wallet.dat. If you already have, you should start over with a new file wallet.dat and only create this special kind of address.
-You should only use this kind of address for your exchange.
+We introduced a new kind of address for use on the exchanges, which acts like a normal Bitcoin address. You can create it with the RPC command: <pre>getnewaddress "" nonprivate</pre>
+So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your wallet.dat file. If you already have many stealth address in your wallet.dat file, you should start over with a new wallet.dat file and only create this special kind of address. You should only use this kind of address for your exchange; <strong>or</strong>
+<br><br>
 </li>
 <li>
-You can use only one stealth address as a deposit address for all users. You can show the user a randomly generated key. The user needs to enter this key as description line when he makes a deposit. You can check the description line when the transaction comes in and credit the coins to the user account.
+You can use only one stealth address as a deposit address for all users and then show the user a randomly generated key. The user will need to enter this key into the description line when he/she makes a deposit. The exchange can then check the description line when the transaction comes in and credit the coins to the appropriate user’s wallet.
 </li>
 </ol>
+Any questions or issues, please join our <a href="https://discord.gg/7P4YcXU">discord</a> and contact Christian Kassler.
 
 
 
