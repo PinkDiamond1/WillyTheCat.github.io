@@ -763,6 +763,10 @@ i {
 	content: "\e906";
 }
 
+.spaceontop {
+  margin-top: 10px;
+}
+
 .icon-twitter:before {
 	content: "\e907";
 }
