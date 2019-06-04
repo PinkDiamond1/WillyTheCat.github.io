@@ -809,6 +809,12 @@ i {
 	flex: 1 0;
 }
 
+.nav-mobile {
+	display: none;
+}
+.nav-desktop {
+	display: inline;
+}
 .nav-menu {
 	font-size: 14px;
 	font-weight: 500;
@@ -2163,6 +2169,13 @@ table th {
 		opacity: 0;
 		z-index: 999;
 		background: #fff;
+	}
+
+	.nav-mobile {
+		display: inline;
+	}
+	.nav-desktop {
+		display: none;
 	}
 
 	.image-box {
