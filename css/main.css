@@ -1347,6 +1347,12 @@ table th {
 	margin: 0 0 10px;
 }
 
+.partnerlogo {
+	background-color: #3e45ac;
+	padding: 30px; 
+	height: 100px
+}
+
 .ico-name {
 	font-weight: 500;
 }
