@@ -1353,6 +1353,12 @@ table th {
 	height: 100px
 }
 
+.partnerlogobig {
+	background-color: #3e45ac;
+	padding: 30px; 
+	height: 200px
+}
+
 .ico-name {
 	font-weight: 500;
 }
