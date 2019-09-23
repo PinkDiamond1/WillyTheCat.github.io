@@ -1350,13 +1350,15 @@ table th {
 .partnerlogo {
 	background-color: #3e45ac;
 	padding: 30px; 
-	height: 100px
+	height: 100px;
+	margin: 10px;
 }
 
 .partnerlogobig {
 	background-color: #3e45ac;
 	padding: 30px; 
-	height: 200px
+	height: 200px;
+	margin: 10px;
 }
 
 .ico-name {
