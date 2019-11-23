@@ -55,16 +55,33 @@ This means that the node will significantly slow down when you add more and more
 There are two possible solutions:
 <ol>
 <li>
-We introduced a new kind of address for use on the exchanges, which acts like a normal Bitcoin address. You can create it with the RPC command: <pre>getnewaddress "" nonprivate</pre>
+We introduced a new kind of address for use on the exchanges, which acts like a normal Bitcoin address. You can create it with the RPC command: 
+<pre>getnewaddress "" nonprivate</pre>
 So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your wallet.dat file. If you already have many stealth address in your wallet.dat file, you should start over with a new wallet.dat file and only create this special kind of address. You should only use this kind of address for your exchange; <strong>or</strong>
 <br><br>
 </li>
 <li>
 You can use only one stealth address as a deposit address for all users and then show the user a randomly generated key. The user will need to enter this key into the description line when he/she makes a deposit. The exchange can then check the description line when the transaction comes in and credit the coins to the appropriate user’s wallet. 
 <br>
-	You can put <pre>deposit@</pre> in front of your deposit address like <pre>deposit@<&ltaddress&gt;</pre> or <pre>deposit@&ltnickname&gt;</pre> and the wallet will check if the user entered a deposit key in the description line field with a minimum length of 5 characters. If you use a deposit@ address nobody can send coins to your address without entering a deposit key. The users need to use at least version v0.16.114 to be able to send coins to a deposit@ address.
+	You can put <pre>deposit@</pre> in front of your deposit address like 
+	<pre>deposit@&ltaddress&gt;</pre> 
+	or 
+	<pre>deposit@&ltnickname&gt;</pre> 
+	and the wallet will check if the user entered a deposit key in the description line field with a minimum length of 5 characters. If you use a deposit@ address nobody can send coins to your address without entering a deposit key. The users need to use at least version v0.16.114 to be able to send coins to a deposit@ address.
 </li>
 </ol>
+
+<h1 align="center" class="Claim-your-coins">Watch only addresses</h1>
+Watch only addresses do not work for the regular stealth addresses (b2...). The wallet needs access to the private key in order to recognize incoming transactions.
+We have another kind of longer stealth addresses which have a viewkey and a private key. These addresses start with a "X..". We use these addresses for the web wallet and the mobile wallets. 
+<br><br>
+You can generate these addresses with:
+<pre>getnewaddress "" withviewkey</pre>
+You can generate the view key from the private key with: 
+<pre>getviewkeyforprivkey privatekey</pre>
+Then you can add the viewkey like you would add a private key to your wallet with <pre>importprivkey</pre> then you can use <pre>importaddress</pre>
+to add the watch only address.
+<br><br>
 Any questions or issues, please join our <a href="https://discord.gg/7P4YcXU">discord</a> and contact Christian Kassler.
 
 
