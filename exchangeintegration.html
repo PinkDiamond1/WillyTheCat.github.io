@@ -50,37 +50,21 @@
 <h1 align="center" class="Claim-your-coins">Integration of BitCash on your exchange</h1>
 BitCash uses stealth addresses and it needs to check if an incoming transaction matches one of the addresses in the wallet.
 <br><br>
-This means that the node will significantly slow down when you add more and more stealth addresses.
+This means that the node will significantly slow down when you add more and more stealth addresses. Also a rescan with thousands of addresses will be nearly impossible, because it would be to time consuming.
 <br><br>
-There are two possible solutions:
-<ol>
-<li>
-We introduced a new kind of address for use on the exchanges, which acts like a normal Bitcoin address. You can create it with the RPC command: 
+To solve this problem, we introduced a new kind of address for use on the exchanges, which acts like a normal Bitcoin address. You can create it with the RPC command: 
 <pre>getnewaddress "" nonprivate</pre>
-So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your wallet.dat file. If you already have many stealth address in your wallet.dat file, you should start over with a new wallet.dat file and only create this special kind of address. You should only use this kind of address for your exchange; <strong>or</strong>
+So you add the “nonprivate” as 3. parameter. Be sure that you do not have many stealth addresses in your wallet.dat file. If you already have many stealth address in your wallet.dat file, you should start over with a new wallet.dat file and only create this special kind of address. You should only use this kind of address for your exchange.
 <br><br>
-</li>
-<li>
-You can use only one stealth address as a deposit address for all users and then show the user a randomly generated key. The user will need to enter this key into the description line when he/she makes a deposit. The exchange can then check the description line when the transaction comes in and credit the coins to the appropriate user’s wallet. 
-<br>
-	You can put <pre>deposit@</pre> in front of your deposit address like 
-	<pre>deposit@&ltaddress&gt;</pre> 
-	or 
-	<pre>deposit@&ltnickname&gt;</pre> 
-	and the wallet will check if the user entered a deposit key in the description line field with a minimum length of 5 characters. If you use a deposit@ address nobody can send coins to your address without entering a deposit key. The users need to use at least version v0.16.114 to be able to send coins to a deposit@ address.
-</li>
-</ol>
 
-<h1 align="center" class="Claim-your-coins">Watch only addresses</h1>
-Watch only addresses do not work for the regular stealth addresses (b2...). The wallet needs access to the private key in order to recognize incoming transactions.
-We have another kind of longer stealth addresses which have a viewkey and a private key. These addresses start with a "X..". We use these addresses for the web wallet and the mobile wallets. 
+<h1 align="center" class="Claim-your-coins">BitCash Dollar and BitCash Gold</h1>
+We currently have 3 currencies on the blockchain. BitCash, BitCash Dollar and BitCash Gold. To receive BitCash Dollar, put a dollar@ in front of the deposit address. To receive BitCash Gold, put a gold@ in front of the deposit address.
 <br><br>
-You can generate these addresses with:
-<pre>getnewaddress "" withviewkey</pre>
-You can generate the view key from the private key with: 
-<pre>getviewkeyforprivkey privatekey</pre>
-Then you can add the viewkey like you would add a private key to your wallet with <pre>importprivkey</pre> then you can use <pre>importaddress</pre>
-to add the watch only address.
+We introduced special RPC commands for the use of BitCash Dollar and BitCash Gold. For example can use <strong>sendtoaddress</strong> if you are only using BitCash. 
+If you want to use all 3 currencies, you can use <strong>sendtoaddressfromcurrency</strong> instead. You can specify the currency as first parameter (0 = BitCash, 1 = BitCash Dollar, 2 = BitCash Gold).
+<br><br>
+Also you can use <strong>getbalanceforcurrency</strong> instead of <strong>getbalance</strong>. And you can use <strong>movecurrency</strong> instead of <strong>move</strong>.
+
 <br><br>
 Any questions or issues, please join our <a href="https://discord.gg/7P4YcXU">discord</a> and contact Christian Kassler.
 
