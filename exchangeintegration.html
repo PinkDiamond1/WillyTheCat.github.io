@@ -63,9 +63,24 @@ We currently have 3 currencies on the blockchain. BitCash, BitCash Dollar and Bi
 We introduced special RPC commands for the use of BitCash Dollar and BitCash Gold. For example can use <strong>sendtoaddress</strong> if you are only using BitCash. 
 If you want to use all 3 currencies, you can use <strong>sendtoaddressfromcurrency</strong> instead. You can specify the currency as first parameter (0 = BitCash, 1 = BitCash Dollar, 2 = BitCash Gold).
 <br><br>
-Also you can use <strong>getbalanceforcurrency</strong> instead of <strong>getbalance</strong>. And you can use <strong>movecurrency</strong> instead of <strong>move</strong>.
+Here is a list of RPC commands which accept the currency parameter:
+<pre>
+getbalanceforcurrency
+getreceivedbyaddressforcurrency
+getunconfirmedbalanceforcurrency
+listreceivedbyaddressforcurrency
+listsinceblockforcurrency
+listtransactionsforcurrency    
+sendfromcurrency
+sendmanyfromcurrency
+sendtoaddressfromcurrency 
+getreceivedbyaccountforcurrency
+listreceivedbyaccountforcurrency
+movecurrency
+getreceivedbylabelforcurrency
+listreceivedbylabelforcurrency
+</pre>
 
-<br><br>
 Any questions or issues, please join our <a href="https://discord.gg/7P4YcXU">discord</a> and contact Christian Kassler.
 
 
